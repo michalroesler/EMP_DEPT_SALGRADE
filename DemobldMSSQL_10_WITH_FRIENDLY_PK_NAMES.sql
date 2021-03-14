@@ -9,10 +9,10 @@ CREATE DATABASE EMP_DEPT_SALGRADE;
 */
 DROP DATABASE EMP_DEPT;
 /*After I've tried to drop EMP_DEPT database I've got the:
- "Cannot drop database "EMP_DEPT" because it is currently in use." error.
- While EMP_DEPT database is in use, more than one user may be connected.
- We need to see WHO is connected to the database.
- */
+  "Cannot drop database "EMP_DEPT" because it is currently in use." error.
+  While EMP_DEPT database is in use, more than one user may be connected.
+  We need to see WHO is connected to the database.
+*/
 
 EXEC SP_WHO       --ORDER BY 'dbname';
 
@@ -62,7 +62,7 @@ DROP TABLE IF EXISTS SALES$;
 
 /* This code will create an unfriendly name for 'dbo.EMP primary key.
 CREATE TABLE EMP
-       (EMPNO INT PRIMARY KEY,       --Nie trzeba dodawaæ 'NOT NULL' je¿eli wczeœniej oznaczyliœmy kolumnê jako PRIMARY KEY.
+       (EMPNO INT PRIMARY KEY,       --Nie trzeba dodawaÃ¦ 'NOT NULL' jeÂ¿eli wczeÅ“niej oznaczyliÅ“my kolumnÃª jako PRIMARY KEY.
         ENAME VARCHAR(18) NOT NULL,  --Fakt istnienia constrainta 'NOT NULL' wynika wprost z oznaczenia kolumny jako PRIMARY KEY.
 		SEX CHAR(1),
         JOB VARCHAR(18),
@@ -75,7 +75,7 @@ CREATE TABLE EMP
         DEPTNO INT);
 */
 CREATE TABLE EMP
-       (EMPNO INT NOT NULL,       --Nie trzeba dodawaæ 'NOT NULL' je¿eli wczeœniej oznaczyliœmy kolumnê jako PRIMARY KEY.
+       (EMPNO INT NOT NULL,       --Nie trzeba dodawaÃ¦ 'NOT NULL' jeÂ¿eli wczeÅ“niej oznaczyliÅ“my kolumnÃª jako PRIMARY KEY.
         ENAME VARCHAR(18) NOT NULL,  --Fakt istnienia constrainta 'NOT NULL' wynika wprost z oznaczenia kolumny jako PRIMARY KEY.
 		SEX CHAR(1),
         JOB VARCHAR(18),
